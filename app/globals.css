@@ -1,26 +1,51 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+.imgClass {
+  @media (max-width: 1060px) {
+    width: 30%;
+    margin-top: -15rem;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+    @media (max-width: 902px) {
+      width: 30%;
+      margin-top: -13rem;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+      @media (max-width: 570px) {
+        width: 30%;
+        margin-top: -8rem;
+      }
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.classs {
+  @media (max-width: 1507px) {
+    width: 30%;
+    margin-top: -7rem !important;
+
+    @media (max-width: 1039px) {
+      width: 30%;
+      margin-top: -15rem !important;
+
+      @media (max-width: 710px) {
+        width: 30%;
+        margin-top: -8rem !important;
+      }
+    }
+  } 
+}
+
+.servicesBox {
+  @media (min-width: 1041px) {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 1024px) {
+  .servicesBox {
+    flex-direction: column;
+  }
+  
 }
